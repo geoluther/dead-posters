@@ -380,12 +380,12 @@ function buildPosters(posters, id) {
 		date = date.toDateString()
 
 		// build img attributes, fancybox classes
-		var img = '<img class="thumbnail" src="' + poster.imgSrc + '">';
+		var img = '<img src="' + poster.imgSrc + '">';
 		var anchor = '<a href="' + poster.imgSrc + '" class="fancybox" rel="gallery" title=" '
 		+ title + '"'
 		+ '>' + img + '</a></div>';
 
-		var nameHTML = '<div class="text-center callout secondary"><h4>' 
+		var nameHTML = '<div class="text-center callout"><h4>' 
 		+ title + '</h4><p>'
 		+ date + '<br><strong><em>' 
 		+ artist 
