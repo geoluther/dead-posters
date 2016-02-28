@@ -24,7 +24,9 @@
 	<link href="css/styles.css" rel="stylesheet">
 
 </head>
-<body>
+
+<body ng-app="phonecatApp" ng-controller="PhoneListCtrl">
+
 	<div class="row">
 		<div class="small-6">
 			<a href="http://www.kgnu.org" class="button radius">
@@ -32,76 +34,72 @@
 			</div>
 		</div>
 
-		<div class="container">
-			<div class="row">
-				<div class="small-10 small-centered columns">
+	<div class="container" ng-app="phonecatApp" ng-controller="PhoneListCtrl">
+		<div class="row">
+			<div class="small-10 small-centered columns">
 
-					<img class="header-img" src="img/DeadPosterText.JPG">
+			<img class="header-img" src="img/DeadPosterText.JPG">
 
-					<h2 class="page-header text-center">KGNU Grateful Dead Posters</h2>
+			<h2 class="page-header text-center">KGNU Grateful Dead Posters</h2>
 
-					<p>These commemorative posters were created for KGNUs Grateful Dead Rare Tape Specials that occur during our semi-annual membership drives. Each person who called during the Dead Special received a free poster.  The first poster was created in 1988, but many of the earlier posters are currently out of print.  Those that are still in print are offered here for sale for $10 each (plus shipping if you don't pick them up).  All posters are printed in full color* on 11x17 cardstock. To order, please call KGNU at <strong>303 449-4885</strong>.</p>
+			<p>These commemorative posters were created for KGNUs Grateful Dead Rare Tape Specials that occur during our semi-annual membership drives. Each person who called during the Dead Special received a free poster.  The first poster was created in 1988, but many of the earlier posters are currently out of print.  Those that are still in print are offered here for sale for $10 each (plus shipping if you don't pick them up).  All posters are printed in full color* on 11x17 cardstock. To order, please call KGNU at <strong>303 449-4885</strong>.</p>
 
-				</div>
+			</div>
+			
 			</div>
 
-			<hr>
-			<div class="row">
+		<hr>
+		<h3> Angular Section </h3>
+
+		<div class="row">
 				<div class="small-12 columns"><p><em>Click images for larger version, use arrow keys to navigate.</em></p></div>
-			</div>
-			<div class="row small-up-2 medium-up-4 large-up-5" id='posters'>
-				<!-- foundation 6 items here -->
+		</div>
+
+			<!-- angular directives -->
+			<!-- missing fancybox codes -->
+		<div class="row small-up-2 medium-up-4 large-up-5">
+		<div class="column" ng-repeat="poster in posters | orderBy: 'date' : 'reverse' ">
+		<a href=" {{ poster.imgSrc}} " class="fancybox" rel="gallery" title="{{ poster.title }}">
+			<img src="{{ poster.imgSrc }}">
+		</a>
+			<div class="text-center callout">
+				<h4>{{ poster.title }} </h4>
+				<p> {{ poster.date | date: format : 'mediumDate'}} <br>
+				<strong><em>{{ poster.artist }}</em></strong></p>
 			</div>
 		</div>
-		<!-- /.container -->
+		</div>
+		</div>
+			<!-- /.container -->
+		<hr>
 
-			<div ng-app="myApp" ng-controller="myCtrl">
-				<div class="container">
-				<h3> Angular Stuff </h3>
-					<h1>{{ firstName }}</h1>
-					<h2>{{ lastName }}</h2>
-				</div>
+			<!-- Footer -->
+	<footer>
+	<div class="row">
+		<div class="small-4 columns">
+			<a href="http://www.kgnu.org" class="button radius">
+				<i class="fa fa-chevron-left"></i> Back To KGNU</a>
+		</div>
+		<div class="small-4 columns">
+							<p>Copyright &copy; KGNU</p>
 			</div>
-
-			<h3>myCtrl2</h3>
-			<div ng-app="myApp" ng-controller="myCtrl2">
-				<div class="container">
-				<h3> Angular Stuff </h3>
-					<h1>{{ firstName }}</h1>
-					<h2>{{ lastName }}</h2>
-				</div>
-			</div>
-
-		<!-- Footer -->
-		<footer>
-			<div class="row">
-				<div class="small-4 columns">
-					<a href="http://www.kgnu.org" class="button radius">
-						<i class="fa fa-chevron-left"></i> Back To KGNU</a>
-					</div>
-					<div class="small-4 columns">
-						<p>Copyright &copy; KGNU</p>
-					</div>
-				</div>
-			</footer>
+	</div>
+	</footer>
 
 
-			<!-- implement angular? -->
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-			<script src="js/foundation.min.js"></script>
-			<script type="text/javascript" src="./fancybox/jquery.fancybox.pack.js"></script>
-			<script src="js/posters-found.js"></script>
-			<script>
-				$(document).ready(function() {
-					$('.fancybox').fancybox();
-				});
-			</script>
-			<script src="js/controllers/myCtrl.js"></script>
-			<script src="js/app-ng.js"></script>
-			
-			<!-- <script src="js/controllers/MainController.js"></script> -->
+				<!-- implement angular? -->
+				<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+				<script src="js/foundation.min.js"></script>
+				<script type="text/javascript" src="./fancybox/jquery.fancybox.pack.js"></script>
+				<script src="js/posters-found.js"></script>
+				<script>
+					$(document).ready(function() {
+						$('.fancybox').fancybox();
+					});
+				</script>
+				<script src="js/app-ng.js"></script>
 
-			<!-- uncomment for live version -->
+				<!-- uncomment for live version -->
 			<!-- script>
 				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
