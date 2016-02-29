@@ -11,8 +11,6 @@
 
 	<title>KGNU Grateful Dead Special Posters</title>
 
-	<!-- Foundation Core CSS update to 6-->
-	<!-- <link href="css/foundation.css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
@@ -47,16 +45,16 @@
 			<p><em>Click images for larger version.</em></p></div>
 		</div>
 
-	<div class="row small-up-2 medium-up-4 large-up-5">
-		<div class="column" ng-repeat="poster in posters | orderBy: 'date': 'reverse' ">
+	<div class="row small-up-2 medium-up-3 large-up-5">
+		<div class="column text-center callout" ng-repeat="poster in posters | orderBy: 'date': 'reverse' ">
 			<a href=" {{ poster.imgSrc }} " class="fancybox" rel="gallery" title="{{ poster.title }}">
 				<img src="{{ poster.imgSrc }}">
 			</a>
-			<div class="text-center callout">
+			<!-- <div class="text-center callout"> -->
 				<h4>{{ poster.title }} </h4>
 				<p> {{ poster.date | date: format : 'mediumDate'}} <br>
 					<strong><em>By: {{ poster.artist }}</em></strong></p>
-			</div>
+			<!-- </div> -->
 		</div>
 	</div>
 </div>

@@ -23,12 +23,16 @@ h1, h2, h3, h4 {
 	/*font-family: 'Montserrat', sans-serif;*/
 }
 
+h4 {
+	margin-bottom: 0px;
+}
+
 .thumbnail {
     padding-bottom: 10px;
 }
 
 footer {
-    margin: 50px 0;
+    margin: 30px 0;
 }
 
 .description {
@@ -43,8 +47,9 @@ footer {
 .column {
 	margin-bottom: 10px;
 }
+
 .callout {
-	padding: 10px;
+	padding: 8px;
 	margin-top: 5px;
 	background: #d7d7db;
 	border-radius: 5px;
