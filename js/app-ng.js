@@ -1,21 +1,10 @@
-var phonecatApp = angular.module('phonecatApp', []);
+var deadposterApp = angular.module('deadposterApp', []);
 
-
-phonecatApp.controller('PhoneListCtrl', function ($scope) {
-  $scope.phones = [
-    {'name': 'Nexus S',
-     'snippet': 'Fast just got faster with Nexus S.'},
-    {'name': 'Motorola XOOM™ with Wi-Fi',
-     'snippet': 'The Next, Next Generation tablet.'},
-    {'name': 'MOTOROLA XOOM™',
-     'snippet': 'The Next, Next Generation tablet.'}
-  ];
+deadposterApp.controller('PosterListCtrl', function ($scope) {
 
   $scope.posters = posters;
 
 });
-
-
 
 
 var posters = [
