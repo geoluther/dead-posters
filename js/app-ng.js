@@ -1,14 +1,11 @@
 var deadposterApp = angular.module('deadposterApp', []);
 
 deadposterApp.controller('PosterListCtrl', function ($scope) {
-
   $scope.posters = posters;
-
 });
 
 
 var posters = [
-
 {
 	"title": "Art Deco Dead",
 	"description": "Some Description",
