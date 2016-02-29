@@ -30,60 +30,56 @@
 		<div class="small-6">
 			<a href="http://www.kgnu.org" class="button radius">
 				<i class="fa fa-chevron-left"></i> Back To KGNU</a>
-			</div>
 		</div>
+	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="small-10 small-centered columns">
-				<img class="header-img" src="img/DeadPosterText.JPG">
-				<h2 class="page-header text-center">KGNU Grateful Dead Posters</h2>
-				<p>These commemorative posters were created for KGNUs Grateful Dead Rare Tape Specials that occur during our semi-annual membership drives. Each person who called during the Dead Special received a free poster.  The first poster was created in 1988, but many of the earlier posters are currently out of print.  Those that are still in print are offered here for sale for $10 each (plus shipping if you don't pick them up).  All posters are printed in full color* on 11x17 cardstock. To order, please call KGNU at <strong>303 449-4885</strong>.</p>
-			</div>	
-		</div>
-		<hr>
-
-		<div class="row">
-			<div class="small-12 columns">
+<div class="container">
+	<div class="row">
+		<div class="small-10 small-centered columns">
+			<img class="header-img" src="img/DeadPosterText.JPG">
+			<h2 class="page-header text-center">KGNU Grateful Dead Posters</h2>
+			<p>These commemorative posters were created for KGNUs Grateful Dead Rare Tape Specials that occur during our semi-annual membership drives. Each person who called during the Dead Special received a free poster.  The first poster was created in 1988, but many of the earlier posters are currently out of print.  Those that are still in print are offered here for sale for $10 each (plus shipping if you don't pick them up).  All posters are printed in full color* on 11x17 cardstock. To order, please call KGNU at <strong>303 449-4885</strong>.</p>
+		</div>	
+	</div>
+	<hr>
+	<div class="row">
+		<div class="small-12 columns">
 			<p><em>Click images for larger version.</em></p></div>
 		</div>
 
-		<div class="row small-up-2 medium-up-4 large-up-5">
-			<div class="column" ng-repeat="poster in posters | orderBy: 'date': 'reverse' ">
+	<div class="row small-up-2 medium-up-4 large-up-5">
+		<div class="column" ng-repeat="poster in posters | orderBy: 'date': 'reverse' ">
 			<a href=" {{ poster.imgSrc }} " class="fancybox" rel="gallery" title="{{ poster.title }}">
 				<img src="{{ poster.imgSrc }}">
 			</a>
-				<div class="text-center callout">
-					<h4>{{ poster.title }} </h4>
-					<p> {{ poster.date | date: format : 'mediumDate'}} <br>
+			<div class="text-center callout">
+				<h4>{{ poster.title }} </h4>
+				<p> {{ poster.date | date: format : 'mediumDate'}} <br>
 					<strong><em>By: {{ poster.artist }}</em></strong></p>
-				</div>
 			</div>
 		</div>
-		</div>
-			<!-- /.container -->
-			<!-- Footer -->
-	<footer>
-	<div class="row">
-		<div class="small-4 columns">
-			<a href="http://www.kgnu.org" class="button radius">
-				<i class="fa fa-chevron-left"></i> Back To KGNU</a>
-		</div>
-		<div class="small-4 columns">
-			<p>Copyright &copy; KGNU</p>
-		</div>
 	</div>
-	</footer>
+</div>
 
-	<!-- fancybox req jquery -->
+<footer>
+	<div class="row">
+			<div class="small-4 columns">
+				<a href="http://www.kgnu.org" class="button radius">
+					<i class="fa fa-chevron-left"></i> Back To KGNU</a>
+			</div>
+			<div class="small-4 columns">
+				<p>Copyright &copy; KGNU</p>
+			</div>
+	</div>
+</footer>
+
+			<!-- jquery for fancybox -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-		<!-- don't need foundation js <script src="js/foundation.min.js"></script> -->
 	<script type="text/javascript" src="./fancybox/jquery.fancybox.pack.js"></script>
-		<!-- <script src="js/posters-found.js"></script> -->
 	<script>
-			$(document).ready(function() {
-				$('.fancybox').fancybox();
-			});
+		$(document).ready(function() {
+			$('.fancybox').fancybox();
+		});
 	</script>
 	<script src="js/app-ng.js"></script>
 
@@ -91,11 +87,11 @@
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-74380556-1', 'auto');
-		ga('send', 'pageview');
+			ga('create', 'UA-74380556-1', 'auto');
+			ga('send', 'pageview');
 	</script>
-</body>
+	</body>
 </html>
 
