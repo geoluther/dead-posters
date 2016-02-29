@@ -48,7 +48,7 @@
 		</div>
 
 		<div class="row small-up-2 medium-up-4 large-up-5">
-			<div class="column" ng-repeat="poster in posters">
+			<div class="column" ng-repeat="poster in posters | orderBy: 'date': 'reverse' ">
 			<a href=" {{ poster.imgSrc }} " class="fancybox" rel="gallery" title="{{ poster.title }}">
 				<img src="{{ poster.imgSrc }}">
 			</a>
