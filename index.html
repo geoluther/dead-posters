@@ -2,26 +2,30 @@
 <html lang="en">
 
 <head>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<meta name="description" content="kgnu grateful dead rare tape special">
+	<meta name="author" content="kgnu community radio">
 
 	<title>KGNU Grateful Dead Special Posters</title>
-	<!-- Foundation Core CSS update to 6-->
-	<link href="css/foundation.css" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css"> -->
 
-	<link href="css/styles.css" rel="stylesheet">
+	<!-- Foundation Core CSS update to 6-->
+	<!-- <link href="css/foundation.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="./fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link href="css/styles.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 
 </head>
-<body>
+
+<body ng-app="deadposterApp" ng-controller="PosterListCtrl">
+
 	<div class="row">
 		<div class="small-6">
 			<a href="http://www.kgnu.org" class="button radius">
@@ -29,59 +33,69 @@
 			</div>
 		</div>
 
-		<div class="container">
-			<div class="row">
-				<div class="small-10 small-centered columns">
-					<img class="header-img" src="img/DeadPosterText.JPG">
-					<h2 class="page-header text-center">KGNU Grateful Dead Posters</h2>
-					<p>These commemorative posters were created for KGNUs Grateful Dead Rare Tape Specials that occur during our semi-annual membership drives. Each person who called during the Dead Special received a free poster.  The first poster was created in 1988, but many of the earlier posters are currently out of print.  Those that are still in print are offered here for sale for $10 each (plus shipping if you don't pick them up).  All posters are printed in full color* on 11x17 cardstock. To order, please call KGNU at <strong>303 449-4885</strong>.</p>
-				</div>
-			</div>
+	<div class="container">
+		<div class="row">
+			<div class="small-10 small-centered columns">
+				<img class="header-img" src="img/DeadPosterText.JPG">
+				<h2 class="page-header text-center">KGNU Grateful Dead Posters</h2>
+				<p>These commemorative posters were created for KGNUs Grateful Dead Rare Tape Specials that occur during our semi-annual membership drives. Each person who called during the Dead Special received a free poster.  The first poster was created in 1988, but many of the earlier posters are currently out of print.  Those that are still in print are offered here for sale for $10 each (plus shipping if you don't pick them up).  All posters are printed in full color* on 11x17 cardstock. To order, please call KGNU at <strong>303 449-4885</strong>.</p>
+			</div>	
+		</div>
+		<hr>
 
-			<hr>
-			<div class="row">
-				<div class="small-12 columns"><p><em>Click images for larger version, use arrow keys to navigate.</em></p></div>
-			</div>
-			<div class="row small-up-2 medium-up-4 large-up-5" id='posters'>
-				<!-- foundation 6 items here -->
+		<div class="row">
+			<div class="small-12 columns">
+			<p><em>Click images for larger version.</em></p></div>
+		</div>
+
+		<div class="row small-up-2 medium-up-4 large-up-5">
+			<div class="column" ng-repeat="poster in posters | orderBy: 'date': 'reverse' ">
+			<a href=" {{ poster.imgSrc }} " class="fancybox" rel="gallery" title="{{ poster.title }}">
+				<img src="{{ poster.imgSrc }}">
+			</a>
+				<div class="text-center callout">
+					<h4>{{ poster.title }} </h4>
+					<p> {{ poster.date | date: format : 'mediumDate'}} <br>
+					<strong><em>By: {{ poster.artist }}</em></strong></p>
+				</div>
 			</div>
 		</div>
-		<!-- /.container -->
-		<footer>
-			<div class="row">
-				<div class="small-4 columns">
-					<a href="http://www.kgnu.org" class="button radius">
-						<i class="fa fa-chevron-left"></i> Back To KGNU</a>
-					</div>
-					<div class="small-4 columns">
-						<p>Copyright &copy; KGNU</p>
-					</div>
-				</div>
-			</footer>
+		</div>
+			<!-- /.container -->
+			<!-- Footer -->
+	<footer>
+	<div class="row">
+		<div class="small-4 columns">
+			<a href="http://www.kgnu.org" class="button radius">
+				<i class="fa fa-chevron-left"></i> Back To KGNU</a>
+		</div>
+		<div class="small-4 columns">
+			<p>Copyright &copy; KGNU</p>
+		</div>
+	</div>
+	</footer>
 
-			<!-- implement angular? -->
-			<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
-			<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-			<script src="js/foundation.min.js"></script>
-			<script type="text/javascript" src="./fancybox/jquery.fancybox.pack.js"></script>
-			<script src="js/posters-found.js"></script>
-			<script>
-				$(document).ready(function() {
-					$('.fancybox').fancybox();
-				});
-			</script>
+	<!-- fancybox req jquery -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<!-- don't need foundation js <script src="js/foundation.min.js"></script> -->
+	<script type="text/javascript" src="./fancybox/jquery.fancybox.pack.js"></script>
+		<!-- <script src="js/posters-found.js"></script> -->
+	<script>
+			$(document).ready(function() {
+				$('.fancybox').fancybox();
+			});
+	</script>
+	<script src="js/app-ng.js"></script>
 
-			<script>
-				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-					m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-				ga('create', 'UA-74380556-1', 'auto');
-				ga('send', 'pageview');
-
-			</script>
-
-		</body>
-		</html>
+		ga('create', 'UA-74380556-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>
 
