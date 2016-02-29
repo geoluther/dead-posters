@@ -24,7 +24,7 @@ var posters = [
 	"title": "Art Deco Dead",
 	"description": "Some Description",
 	"link": "#",
-	"date": new Date("10-07-2006"),
+	"date": "10-07-2006",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/ArtDecoDead.jpg"
@@ -34,7 +34,7 @@ var posters = [
 	"title": "Backstage Pass",
 	"description": "Some Description",
 	"link": "#",
-	"date": new Date("10-24-1998"),
+	"date": "10-24-1998",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/BackstagePass.jpg"
@@ -44,7 +44,7 @@ var posters = [
 	"title": "Blue Eyes",
 	"description": "Some Description",
 	"link": "#",
-	"date": new Date("03-21-2009"),
+	"date": "03-21-2009",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/BlueEyes.jpg"
@@ -54,7 +54,7 @@ var posters = [
 	"title": "Celtic Dead",
 	"description": "Some Description",
 	"link": "#",
-	"date": new Date("04-19-1997"),
+	"date": "04-19-1997",
 	"artist": "Chris O'Riley, George Bain, Arleigh",
 	"orient": "p",
 	"imgSrc": "img/CelticDead.jpg"
@@ -64,7 +64,7 @@ var posters = [
 	"title": "Dark Star",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-04-2003"),
+	"date": "10-04-2003",
 	"artist": "Chris O'Riley, Gustave Dore",
 	"orient": "p",
 	"imgSrc": "img/DarkStar.jpg"
@@ -74,7 +74,7 @@ var posters = [
 	"title": "Dead & Beyond",
 	"description": "",
 	"link": "#",
-	"date": new Date("03-24-2007"),
+	"date": "03-24-2007",
 	"artist": "Chris O'Riley, B. Thomas, A. Owsley",
 	"orient": "p",
 	"imgSrc": "img/DeadBeyond.jpg"
@@ -85,7 +85,7 @@ var posters = [
 	"title": "Dead Through the Years",
 	"description": "",
 	"link": "#",
-	"date": new Date("03-19-2011"),
+	"date": "03-19-2011",
 	"artist": "Chris O'Riley, Bob Marks",
 	"orient": "h",
 	"imgSrc": "img/DeadThroughtheYears.jpg"
@@ -95,7 +95,7 @@ var posters = [
 	"title": "Fractal Skull",
 	"description": "",
 	"link": "#",
-	"date": new Date("03-08-2008"),
+	"date": "03-08-2008",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/FractalSkull.jpg"
@@ -105,7 +105,7 @@ var posters = [
 	"title": "Jerry Garcia Memorial",
 	"description": "",
 	"link": "#",
-	"date": new Date("11-04-1995"),
+	"date": "11-04-1995",
 	"artist": "Judy Strahota, Chris O'Riley",
 	"orient": "h",
 	"imgSrc": "img/JerryGarciaMemorial.jpg"
@@ -115,7 +115,7 @@ var posters = [
 	"title": "Jerry Garcia Tribute",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-16-2010"),
+	"date": "10-16-2010",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/JerryGarciaTribute.jpg"
@@ -125,7 +125,7 @@ var posters = [
 	"title": "Maya Dead",
 	"description": "",
 	"link": "#",
-	"date": new Date("04-03-2004"),
+	"date": "04-03-2004",
 	"artist": "Chris O'Riley",
 	"orient": "h",
 	"imgSrc": "img/MayaDead.jpg"
@@ -135,7 +135,7 @@ var posters = [
 	"title": "OZO",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-13-2012"),
+	"date": "10-13-2012",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/OZO.jpg"
@@ -145,7 +145,7 @@ var posters = [
 	"title": "Pigpen",
 	"description": "",
 	"link": "#",
-	"date": new Date("03-20-2010"),
+	"date": "03-20-2010",
 	"artist": "Chris O'Riley, Bob Marks",
 	"orient": "p",
 	"imgSrc": "img/Pigpen.jpg"
@@ -155,7 +155,7 @@ var posters = [
 	"title": "Skeletons on the Mount",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-22-1988"),
+	"date": "10-22-1988",
 	"artist": "Bruce Campbell, Gustave Dore",
 	"orient": "p",
 	"imgSrc": "img/SkeletonsontheMount.jpg"
@@ -165,7 +165,7 @@ var posters = [
 	"title": "The Band",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-16-1999"),
+	"date": "10-16-1999",
 	"artist": "Chris O'Riley",
 	"orient": "h",
 	"imgSrc": "img/TheBand.jpg"
@@ -175,7 +175,7 @@ var posters = [
 	"title": "The Bus",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-18-1997"),
+	"date": "10-18-1997",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/TheBus.jpg"
@@ -185,7 +185,7 @@ var posters = [
 	"title": "The Carrion Crow",
 	"description": "",
 	"link": "#",
-	"date": new Date("04-24-1999"),
+	"date": "04-24-1999",
 	"artist": "Arleigh, Chris O'Riley",
 	"orient": "h",
 	"imgSrc": "img/TheCarrionCrow.jpg"
@@ -195,7 +195,7 @@ var posters = [
 	"title": "The Dragon",
 	"description": "",
 	"link": "#",
-	"date": new Date("04-20-2002"),
+	"date": "04-20-2002",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/TheDragon.jpg"
@@ -205,7 +205,7 @@ var posters = [
 	"title": "The Flag",
 	"description": "",
 	"link": "#",
-	"date": new Date("03-23-2013"),
+	"date": "03-23-2013",
 	"artist": "Chris O'Riley",
 	"orient": "h",
 	"imgSrc": "img/TheFlag.jpg"
@@ -215,7 +215,7 @@ var posters = [
 	"title": "The Jester",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-14-2000"),
+	"date": "10-14-2000",
 	"artist": "Arleigh, Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/TheJester.jpg"
@@ -225,7 +225,7 @@ var posters = [
 	"title": "The Mask",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-17-2015"),
+	"date": "10-17-2015",
 	"artist":  "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/TheMask.jpg"
@@ -235,7 +235,7 @@ var posters = [
 	"title": "The Phil Zone",
 	"description": "",
 	"link": "#",
-	"date": new Date("04-19-2003"),
+	"date": "04-19-2003",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/ThePhilZone.jpg"
@@ -245,7 +245,7 @@ var posters = [
 	"title": "The Pipe",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-15-2011"),
+	"date": "10-15-2011",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/ThePipe.jpg"
@@ -255,7 +255,7 @@ var posters = [
 	"title": "The Train",
 	"description": "",
 	"link": "#",
-	"date": new Date("09-20-2008"),
+	"date": "09-20-2008",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/TheTrain.jpg"
@@ -265,7 +265,7 @@ var posters = [
 	"title": "The Zodiac",
 	"description": "",
 	"link": "#",
-	"date": new Date("03-03-2012"),
+	"date": "03-03-2012",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/TheZodiac.jpg"
@@ -275,7 +275,7 @@ var posters = [
 	"title": "Tie Dye Dead",
 	"description": "",
 	"link": "#",
-	"date": new Date("04-27-1996"),
+	"date": "04-27-1996",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/TieDyeDead.jpg"
@@ -285,7 +285,7 @@ var posters = [
 	"title": "Truckin",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-27-2001"),
+	"date": "10-27-2001",
 	"artist": "Martin Dadisman, Chris O'Riley",
 	"orient": "h",
 	"imgSrc": "img/Truckin.jpg"
@@ -295,7 +295,7 @@ var posters = [
 	"title": "Ultimate Dead",
 	"description": "",
 	"link": "#",
-	"date": new Date("03-15-2004"),
+	"date": "03-15-2004",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/UltimateDead.jpg"
@@ -305,7 +305,7 @@ var posters = [
 	"title": "Uncle Dead",
 	"description": "",
 	"link": "#",
-	"date": new Date("04-20-2007"),
+	"date": "04-20-2007",
 	"artist": "Terry Kishiyama",
 	"orient": "p",
 	"imgSrc": "img/UncleDead.jpg"
@@ -315,7 +315,7 @@ var posters = [
 	"title": "Wanted",
 	"description": "",
 	"link": "#",
-	"date": new Date("10-18-2014"),
+	"date": "10-18-2014",
 	"artist": "Chris O'Riley, Bob Marks",
 	"orient": "p",
 	"imgSrc": "img/Wanted.jpg"
@@ -325,7 +325,7 @@ var posters = [
 	"title": "Celtic Circle",
 	"description": "",
 	"link": "#",
-	"date": new Date("03-12-2016"),
+	"date": "03-12-2016",
 	"artist": "Chris O'Riley",
 	"orient": "p",
 	"imgSrc": "img/Celtic Circle.jpg",
